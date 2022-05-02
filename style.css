@@ -1,3 +1,36 @@
-h1, h2 {
+h1,
+h2 {
   font-family: Lato;
+}
+
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.disappear {
+  animation-duration: 3s;
+  animation-name: disappear;
+}
+
+@keyframes disappear {
+  from {
+    background: white;
+    /* display: static; */
+  }
+  to {
+    left-margin: 0%;
+    /* display: none; */
+  }
 }
