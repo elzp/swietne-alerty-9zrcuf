@@ -4,7 +4,7 @@ h2 {
 }
 
 p {
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-name: slidein;
 }
 
@@ -25,12 +25,13 @@ p {
 }
 
 @keyframes disappear {
-  from {
-    background: white;
-    /* display: static; */
+  0% {
+    opacity: 100%;
+    display: static;
   }
-  to {
-    left-margin: 0%;
-    /* display: none; */
+
+  100% {
+    opacity: 0;
+    display: none;
   }
 }

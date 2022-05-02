@@ -42,4 +42,20 @@ const alerts = document.querySelectorAll('.-m-2>.p-2');
 alerts.forEach((item, index) => {
   item.innerHTML = new Alert(data[index].type, data[index].message).create();
   const oneAlert = item.querySelector('div');
+
+  oneAlert.addEventListener('click', () => {
+    oneAlert.className += ' disappear';
+    setTimeout(() => {
+      oneAlert.style.display = 'none';
+    }, 2000);
+    console.log('here'); //.backgroud-color = 'red'
+    console.log('cos', oneAlert.classList);
+  });
+
+  setTimeout(() => {
+    oneAlert.className += ' disappear';
+  }, 10000);
+  setTimeout(() => {
+    oneAlert.style.display = 'none';
+  }, 12000);
 });
